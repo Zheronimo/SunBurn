@@ -1,0 +1,10 @@
+extends ../main-layout
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page'
+
+block content
+	main.main
+		include ../modules/active/active
+		include ../modules/content/content

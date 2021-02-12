@@ -1,0 +1,44 @@
+.active {
+	padding: 34px 0;
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		& > * {
+			&:not(:last-child) { margin-right: 60px; }
+		}
+		@include phablet() {
+			flex-direction: column;
+				& > * {
+					&:not(:last-child) { 
+						margin-right: 0px;
+						margin-bottom: 20px; 
+					}
+				}
+		}
+	}
+	&__btn {
+		padding: 14px 35px;
+		font-size: 16px;
+		font-weight: 700;
+		color: $color-white;
+		box-shadow: 5px 6px 22px rgba(204, 61, 0, 0.24);
+		border-radius: 6px;
+		background-color: $color-action;
+		@include shift();
+		&:hover {
+			background-color: darken($color-action,15%);
+		}
+	}
+	&__link {
+		font-weight: 700;
+		line-height: 20.8px;
+		color: $color-action;
+		text-decoration: underline;
+		@include shift();
+		&:hover {
+			color: darken($color-action,15%);
+		}
+	}
+
+}
